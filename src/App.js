@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import Home from './components/Home';
-import {BrowserRouter} from 'react-router-dom';
+import About from './components/About';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <Home />
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
       </BrowserRouter>
     );
   }
